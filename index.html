@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsultingReimagined.ai - The Future of Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally */
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Default dark background */
+            color: #F3F4F6; /* Default light text */
+        }
+        /* Simple animation for section reveals */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Style for the timeline */
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem; /* Space for line and dot */
+        }
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.25rem;
+            bottom: -0.5rem; /* Extend line below dot */
+            width: 2px;
+            background-color: #3B82F6; /* Blue line */
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            width: 1.25rem; /* 20px */
+            height: 1.25rem; /* 20px */
+            background-color: #3B82F6; /* Blue dot */
+            border-radius: 50%;
+            border: 3px solid #1F2937; /* Match dark background */
+        }
+        /* Style for alternating backgrounds */
+        .tile-dark { background-color: #111827; color: #F3F4F6; }
+        .tile-light { background-color: #F9FAFB; color: #1F2937; }
+        .tile-light .timeline-dot { border-color: #F9FAFB; } /* Adjust dot border for light bg */
+        .tile-light .timeline-item:not(:last-child)::before { background-color: #60A5FA; } /* Lighter blue line on light bg */
+        .tile-light .timeline-dot { background-color: #60A5FA; } /* Lighter blue dot on light bg */
+
+        /* Header styling */
+        header {
+             background-color: rgba(17, 24, 39, 0.8); /* Slightly transparent dark bg */
+             backdrop-filter: blur(10px);
+             -webkit-backdrop-filter: blur(10px); /* Safari */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 shadow-md text-gray-200">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">ConsultingReimagined<span class="text-blue-400">.ai</span></h1>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#problem" class="hover:text-blue-300 transition duration-300">The Problem</a>
+                <a href="#evolution" class="hover:text-blue-300 transition duration-300">Evolution</a>
+                <a href="#solution" class="hover:text-blue-300 transition duration-300">AI Lifecycle</a>
+                <a href="#future" class="hover:text-blue-300 transition duration-300">Future Model</a>
+                <a href="#contact" class="bg-blue-600 text-white font-medium px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Learn More</a>
+            </nav>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="tile-dark min-h-screen flex items-center py-24 px-6 relative overflow-hidden">
+            <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center reveal-on-scroll">
+                <div class="text-center md:text-left z-10">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">Reimagining Consulting with <span class="text-blue-400">AI</span></h2>
+                    <p class="text-lg md:text-xl text-gray-300 mb-10">
+                        What if one intelligent AI agent could manage your entire consulting lifecycle?
+                        We’re building a smarter, faster, and more adaptive way to work. One that scales, learns, and evolves — just like your business.
+                    </p>
+                    <a href="#problem" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out text-lg">Discover How</a>
+                </div>
+                <div class="relative h-64 md:h-full flex items-center justify-center z-0">
+                    <img src="https://placehold.co/600x400/1F2937/3B82F6?text=Animated+AI+Interface" alt="Animated AI assistant beside a consultant with a clean, glowing interface" class="rounded-lg shadow-2xl opacity-80 w-full max-w-md md:max-w-full" onerror="this.src='https://placehold.co/600x400/1F2937/3B82F6?text=Visual+Placeholder'">
+                    </div>
+            </div>
+             <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-blue-900 opacity-30 z-0"></div>
+        </section>
+
+        <section id="problem" class="tile-light py-20 px-6 reveal-on-scroll">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Why Consulting Needs to Change</h3>
+                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Traditional consulting is too slow, reactive, and fragmented.
+                    Project managers juggle too much. Analysts live in spreadsheets. Support gets overloaded after go-live.
+                    In an AI-first world, this doesn’t cut it anymore.
+                </p>
+                <div class="relative h-64 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+                    <img src="https://placehold.co/800x300/E5E7EB/4B5563?text=Stressed+Silhouettes+%2B+Tool+Logos" alt="Silhouettes of stressed project managers, analysts, and clients with overlays of Excel, PowerPoint, Jira icons" class="rounded-lg w-full h-full object-cover opacity-70" onerror="this.src='https://placehold.co/800x300/E5E7EB/4B5563?text=Visual+Placeholder'">
+                    <p class="absolute text-gray-500 text-sm">Visual Suggestion: Silhouettes with tool icons (Excel, Jira etc.)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="evolution" class="tile-dark py-20 px-6 reveal-on-scroll">
+            <div class="container mx-auto max-w-5xl">
+                <h3 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">From Briefcases to Bots: The Evolution of Consulting</h3>
+                <p class="text-lg text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+                    Consulting has always been about solving problems. But the tools and methods? They’ve changed. Here's how we got here:
+                </p>
+                <div class="relative">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-xl mb-1 text-blue-300">1950s–70s</h4>
+                        <p class="text-gray-400">Management consultants with clipboards and theory-based reports.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-xl mb-1 text-blue-300">1980s–90s</h4>
+                        <p class="text-gray-400">ERP systems and process improvement methodologies like Six Sigma.</p>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-xl mb-1 text-blue-300">2000s</h4>
+                        <p class="text-gray-400">BI dashboards, Excel mastery, cloud starts to emerge.</p>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-xl mb-1 text-blue-300">2010s</h4>
+                        <p class="text-gray-400">Agile methodologies, SaaS proliferation, and digital tools speed things up.</p>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-xl mb-1 text-blue-300">2020s</h4>
+                        <p class="text-gray-400">RPA and task automation gain traction. AI enters the picture.</p>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot" style="background-color: #059669;"></div> <h4 class="font-semibold text-xl mb-1 text-green-400">Now: The AI Agent Era</h4>
+                        <p class="text-gray-300">One intelligent AI agent, managing the entire lifecycle. Welcome to the future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution">
+            <div class="tile-light py-20 px-6 reveal-on-scroll">
+                <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-gray-800">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4">Smarter Starts: Automated Discovery</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Our AI agent conducts intake interviews, scans legacy systems, and builds tailored needs profiles.
+                            It empowers consultants to begin with clarity — saving time, budget, and headaches.
+                        </p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">See Discovery in Action &rarr;</a>
+                    </div>
+                    <div class="relative h-64 md:h-80 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+                        <img src="https://placehold.co/600x350/E5E7EB/1D4ED8?text=AI+Chat+%26+Doc+Scan" alt="Chat interface between consultant and AI, with AI scanning documents and systems" class="rounded-lg w-full h-full object-cover opacity-80" onerror="this.src='https://placehold.co/600x350/E5E7EB/1D4ED8?text=Visual+Placeholder'">
+                        <p class="absolute bottom-2 right-2 text-xs text-gray-500">📸 Consultant + chat interaction</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile-dark py-20 px-6 reveal-on-scroll">
+                 <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+                     <div class="md:order-2 text-white">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4">Live Demos in Minutes, Not Days</h3>
+                        <p class="text-lg text-gray-300 mb-6">
+                           The AI can generate working demos based on client responses — visualizing their future state in real time.
+                           No more endless iterations. Clients see it, shape it, and sign off with confidence.
+                        </p>
+                        <a href="#contact" class="text-blue-400 font-semibold hover:underline">Visualize Your Solution &rarr;</a>
+                    </div>
+                    <div class="relative h-64 md:h-80 md:order-1 bg-gray-700 rounded-lg shadow-lg flex items-center justify-center">
+                        <img src="https://placehold.co/600x350/374151/60A5FA?text=AI-Generated+Prototypes" alt="Interactive dashboards and simulated user flows generated by AI" class="rounded-lg w-full h-full object-cover opacity-80" onerror="this.src='https://placehold.co/600x350/374151/60A5FA?text=Visual+Placeholder'">
+                        <p class="absolute bottom-2 right-2 text-xs text-gray-400">✨ Interactive prototype cards</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile-light py-20 px-6 reveal-on-scroll">
+                <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-gray-800">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4">Execution, Enhanced</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            During go-live, the AI agent manages tasks, monitors configurations, and answers real-time questions from clients and consultants.
+                            The result: fewer blockers, smoother sprints, and faster launches.
+                        </p>
+                         <a href="#contact" class="text-blue-600 font-semibold hover:underline">Streamline Implementation &rarr;</a>
+                    </div>
+                    <div class="relative h-64 md:h-80 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
+                        <img src="https://placehold.co/600x350/E5E7EB/1D4ED8?text=AI-Assisted+Implementation" alt="Gantt chart with AI pop-up suggestions and real-time chat assistance interface" class="rounded-lg w-full h-full object-cover opacity-80" onerror="this.src='https://placehold.co/600x350/E5E7EB/1D4ED8?text=Visual+Placeholder'">
+                         <p class="absolute bottom-2 right-2 text-xs text-gray-500">📸 Consultant updates AI, client chats</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile-dark py-20 px-6 reveal-on-scroll">
+                 <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+                     <div class="md:order-2 text-white">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4">AI Support That Grows With You</h3>
+                        <p class="text-lg text-gray-300 mb-6">
+                            After go-live, the AI remains on duty — resolving tickets, rolling out updates, and suggesting future improvements.
+                            Clients get long-term support. We get long-term trust.
+                        </p>
+                        <a href="#contact" class="text-blue-400 font-semibold hover:underline">Explore Long-Term Partnership &rarr;</a>
+                    </div>
+                    <div class="relative h-64 md:h-80 md:order-1 bg-gray-700 rounded-lg shadow-lg flex items-center justify-center">
+                        <img src="https://placehold.co/600x350/374151/60A5FA?text=AI+Support+Dashboard" alt="Support dashboard showing ticket resolution and AI-suggested enhancements" class="rounded-lg w-full h-full object-cover opacity-80" onerror="this.src='https://placehold.co/600x350/374151/60A5FA?text=Visual+Placeholder'">
+                        <p class="absolute bottom-2 right-2 text-xs text-gray-400">💡 AI insights & suggestions panel</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="tile-dark py-24 px-6 text-center reveal-on-scroll border-t border-gray-700">
+            <div class="container mx-auto max-w-4xl">
+                <h3 class="text-4xl md:text-5xl font-bold mb-6 text-white">One Agent. <span class="text-blue-400">Every Phase.</span></h3>
+                <p class="text-xl text-gray-300 mb-12">
+                    From discovery to deployment to future growth — the same AI agent adapts, learns, and evolves.
+                    It’s not just a tool. It’s a partner. This is the future of consulting.
+                </p>
+                <div class="relative h-56 w-full max-w-2xl mx-auto mb-12 bg-gray-800 rounded-full flex items-center justify-center shadow-xl border border-blue-500/30">
+                    <img src="https://placehold.co/500x200/1F2937/3B82F6?text=AI-Powered+Consulting+Lifecycle" alt="Diagram showing a loop: Discovery -> Prototype -> Implementation -> Support, with a central AI icon" class="rounded-lg opacity-75" onerror="this.src='https://placehold.co/500x200/1F2937/3B82F6?text=Visual+Placeholder'">
+                     <p class="absolute text-gray-400 text-sm">Visual Suggestion: Animated Lifecycle Loop</p>
+                </div>
+                 <a href="#contact" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out text-lg">Shape the Future With Us</a>
+            </div>
+        </section>
+
+        <section id="contact" class="tile-light py-20 px-6 text-center reveal-on-scroll">
+             <div class="container mx-auto max-w-3xl">
+                 <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Ready to Experience AI-Driven Consulting?</h3>
+                 <p class="text-lg text-gray-600 mb-10">Contact us to learn more about ConsultingReimagined.ai and how our intelligent agent can transform your next project.</p>
+                 <form class="space-y-4 max-w-xl mx-auto">
+                     <div>
+                         <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                     </div>
+                      <div>
+                         <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                     </div>
+                      <div>
+                         <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                     </div>
+                     <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out text-lg">Send Inquiry</button>
+                 </form>
+             </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 px-6 text-center border-t border-gray-700">
+        <div class="container mx-auto">
+            <p>&copy; 2025 ConsultingReimagined.ai (Concept). All Rights Reserved.</p>
+            <nav class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white text-sm">Privacy Policy</a>
+                <a href="#" class="hover:text-white text-sm">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Simple reveal-on-scroll animation
+        const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: Unobserve after revealing to save resources
+                    // observer.unobserve(entry.target);
+                }
+                // Optional: Keep elements visible once they appear
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Basic Mobile Menu Toggle (Example)
+        // Add functionality if needed
+        // const menuButton = document.querySelector('header button');
+        // const navMenu = document.querySelector('header nav');
+        // menuButton.addEventListener('click', () => {
+        //     navMenu.classList.toggle('hidden');
+        // });
+
+    </script>
+
+</body>
+</html>
