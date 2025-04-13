@@ -66,6 +66,19 @@
              backdrop-filter: blur(10px);
              -webkit-backdrop-filter: blur(10px); /* Safari */
         }
+
+        /* Ensure images fit within their frames */
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .fit-image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -99,8 +112,8 @@
                     <a href="#problem" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out text-lg">Discover How</a>
                 </div>
                 <div class="relative h-64 md:h-full flex items-center justify-center z-0">
-                    <img src="images/Tileone.png" alt="Animated AI assistant beside a consultant with a clean, glowing interface" class="rounded-lg shadow-2xl opacity-80 w-full max-w-md md:max-w-full" onerror="this.src='https://placehold.co/600x400/1F2937/3B82F6?text=Visual+Placeholder'">
-                    </div>
+                    <img src="images/Tileone.png" alt="..." class="rounded-lg shadow-2xl opacity-80 fit-image">
+                </div>
             </div>
              <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-blue-900 opacity-30 z-0"></div>
         </section>
@@ -114,7 +127,7 @@
                     In an AI-first world, this doesn’t cut it anymore.
                 </p>
                 <div class="relative h-64 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center">
-                    <img src="images\Tiletwo.png" alt="Silhouettes of stressed project managers, analysts, and clients with overlays of Excel, PowerPoint, Jira icons" class="rounded-lg w-full h-full object-cover opacity-70" onerror="this.src='https://placehold.co/800x300/E5E7EB/4B5563?text=Visual+Placeholder'">
+                    <img src="images/Tiletwo.png" alt="..." class="rounded-lg fit-image">
                     <p class="absolute text-gray-500 text-sm">Visual Suggestion: Silhouettes with tool icons (Excel, Jira etc.)</p>
                 </div>
             </div>
